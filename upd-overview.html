@@ -17,7 +17,7 @@
   <div class="container vh-100">
     <header id="header">
       <div class="row">
-        <div class="col-md-3 text-start"><img class="img-fluid fip-colour" src="img/CRA-FIP-9pt-e.png"/></div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-start"><img class="img-fluid fip-colour" src="img/CRA-FIP-9pt-e.png"/></div>
         <div class="col-md-9 text-end lang-toggle"> <a href="#">Français</a> </div>
       </div>  
     </header>
@@ -58,8 +58,15 @@
 
         <div class="row mb-4">
           <div class="col">
-            <button type="button" class="btn btn-light align-middle pe-4"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path fill="none" d="M4.998 8H19v12H4.998z"></path><path d="M2.999 6v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2h-6V2h-2v2h-2c-1.103 0-2 .897-2 2zm16.002 14H4.999V8h14l.002 12z"></path></svg> Last week </button> <span class="text-secondary ps-2 text-nowrap">Jun 1-7 compared to May 25 -31</span>
-          </div>  
+            <button type="button" class="btn btn-light dropdown-toggle" id="range-button" data-bs-toggle="dropdown" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path fill="none" d="M4.998 8H19v12H4.998z"></path><path d="M2.999 6v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2h-6V2h-2v2h-2c-1.103 0-2 .897-2 2zm16.002 14H4.999V8h14l.002 12z"></path></svg> Last week </button> <span class="text-secondary ps-2 text-nowrap">Jun 1-7 compared to May 25 -31</span>
+
+            <ul class="dropdown-menu" aria-labelledby="range-button">
+              <li><a class="dropdown-item" href="#">Last week</a></li>
+              <li><a class="dropdown-item" href="#">Last month</a></li>
+              <li><a class="dropdown-item" href="#">Last year</a></li>
+            </ul>
+
+          </div>
         </div>  
 
         <div class="row mb-4">
@@ -127,12 +134,12 @@
                         }, {
                           label: "Europe",
                           type: "bar",
-                          backgroundColor: "rgba(0,0,0,0.2)",
+                          backgroundColor: "#2E5EA7",
                           data: [408,547,675,734],
                         }, {
                           label: "Africa",
                           type: "bar",
-                          backgroundColor: "rgba(0,0,0,0.2)",
+                          backgroundColor: "#B5C2CC",
                           backgroundColorHover: "#3e95cd",
                           data: [133,221,783,2478]
                         }
@@ -218,19 +225,19 @@
                   <tr>
                     <td>COVID-19</td>
                     <td>CRB</td>
-                    <td>&plus; 5.0%</td>
+                    <td><span class="text-danger">&plus; 5.0%</span></td>
                     <td>1,938,203</td>
+                  </tr>
+                  <tr>
+                    <td>cra login</td>
+                    <td>My account</td>
+                    <td>&minus; 5.0%</td>
+                    <td>938,203</td>
                   </tr>
                   <tr>
                     <td>COVID-19</td>
                     <td>CRB</td>
-                    <td>&plus; 5.0%</td>
-                    <td>1,938,203</td>
-                  </tr>
-                  <tr>
-                    <td>COVID-19</td>
-                    <td>CRB</td>
-                    <td>&plus; 5.0%</td>
+                    <td><span class="text-danger">&plus; 5.0%</span></td>
                     <td>1,938,203</td>
                   </tr>
                   </tbody>  
@@ -300,9 +307,140 @@
           </div>
         </div>  
 
-    <!--Main content end-->
-  </div>
+        <div class="row mb-4">
+          <div class="col-lg-6 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Did you find what you were looking for?</span></h3>
+                <canvas id="bar-chart" width="800" height="450"></canvas>
+                <script>
+                new Chart(document.getElementById("bar-chart"), {
+                    type: 'bar',
+                    data: {
+                      labels: ["Africa", "Asia"],
+                      datasets: [
+                        {
+                          label: "Population (millions)",
+                          backgroundColor: ["#f57f17", "#2e5ea7"],
+                          data: [2478,5267]
+                        }
+                      ]
+                    },
+                    options: {
+                      legend: { display: false },
+                      title: {
+                        display: true,
+                        text: 'Predicted world population (millions) in 2050'
+                      }
+                    }
+                });
+              </script>
+                <details class="details-chart">
+                  <summary>View table data</summary>
+                  <table class="table">
+                  <tr><th>Header 1</th><th>Header 2</th><th>Header 3</th><th>Header 4</th><th>Header 5</th></tr>
+                  <tr><td>Row:1 Cell:1</td><td>Row:1 Cell:2</td><td>Row:1 Cell:3</td><td>Row:1 Cell:4</td><td>Row:1 Cell:5</td></tr>
+                  <tr><td>Row:2 Cell:1</td><td>Row:2 Cell:2</td><td>Row:2 Cell:3</td><td>Row:2 Cell:4</td><td>Row:2 Cell:5</td></tr>
+                  <tr><td>Row:3 Cell:1</td><td>Row:3 Cell:2</td><td>Row:3 Cell:3</td><td>Row:3 Cell:4</td><td>Row:3 Cell:5</td></tr>
+                  <tr><td>Row:4 Cell:1</td><td>Row:4 Cell:2</td><td>Row:4 Cell:3</td><td>Row:4 Cell:4</td><td>Row:4 Cell:5</td></tr>
+                  <tr><td>Row:5 Cell:1</td><td>Row:5 Cell:2</td><td>Row:5 Cell:3</td><td>Row:5 Cell:4</td><td>Row:5 Cell:5</td></tr>
+                  <tr><td>Row:6 Cell:1</td><td>Row:6 Cell:2</td><td>Row:6 Cell:3</td><td>Row:6 Cell:4</td><td>Row:6 Cell:5</td></tr>
+                  </table>
+                </details>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">What was wrong?</span></h3>
+                <canvas id="bar-chart2" width="800" height="450"></canvas>
+                <script>
+                new Chart(document.getElementById("bar-chart2"), {
+                    type: 'bar',
+                    data: {
+                      labels: ["Africa", "Asia"],
+                      datasets: [
+                        {
+                          label: "Population (millions)",
+                          backgroundColor: ["#fbc02d", "#26a69a"],
+                          data: [2478,5267]
+                        }
+                      ]
+                    },
+                    options: {
+                      legend: { display: false },
+                      title: {
+                        display: true,
+                        text: 'Predicted world population (millions) in 2050'
+                      }
+                    }
+                });
+              </script>
+                <details class="details-chart">
+                  <summary>View table data</summary>
+                  <table class="table">
+                  <tr><th>Header 1</th><th>Header 2</th><th>Header 3</th><th>Header 4</th><th>Header 5</th></tr>
+                  <tr><td>Row:1 Cell:1</td><td>Row:1 Cell:2</td><td>Row:1 Cell:3</td><td>Row:1 Cell:4</td><td>Row:1 Cell:5</td></tr>
+                  <tr><td>Row:2 Cell:1</td><td>Row:2 Cell:2</td><td>Row:2 Cell:3</td><td>Row:2 Cell:4</td><td>Row:2 Cell:5</td></tr>
+                  <tr><td>Row:3 Cell:1</td><td>Row:3 Cell:2</td><td>Row:3 Cell:3</td><td>Row:3 Cell:4</td><td>Row:3 Cell:5</td></tr>
+                  <tr><td>Row:4 Cell:1</td><td>Row:4 Cell:2</td><td>Row:4 Cell:3</td><td>Row:4 Cell:4</td><td>Row:4 Cell:5</td></tr>
+                  <tr><td>Row:5 Cell:1</td><td>Row:5 Cell:2</td><td>Row:5 Cell:3</td><td>Row:5 Cell:4</td><td>Row:5 Cell:5</td></tr>
+                  <tr><td>Row:6 Cell:1</td><td>Row:6 Cell:2</td><td>Row:6 Cell:3</td><td>Row:6 Cell:4</td><td>Row:6 Cell:5</td></tr>
+                  </table>
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>  
 
+        <div class="row mb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Tests completed</span></h3>
+                  <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8"><span class="h3 text-nowrap">24</span></div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 text-end"><span class="h3 text-danger text-nowrap"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Tasks tested</span></h3>
+                  <div class="row">
+                    <div class="col-md-8 col-sm-6"><span class="h3 text-nowrap">50</span></div>
+                    <div class="col-md-4 col-sd-6 text-end"><span class="h3 text-success text-nowrap"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Participants</span></h3>
+                  <div class="row">
+                    <div class="col-sm-8"><span class="h3 text-nowrap">120</span></div>
+                    <div class="col-sm-4 text-end"><span class="h3 text-danger text-nowrap"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    <!--Main content end-->
+
+  <footer>
+    <div class="d-flex flex-row-reverse mt-5 pb-4">
+      <div class="col-lg-1 col-md-2 col-sm-6 col-xs-6"><img class="img-fluid" src="img/canada-black-30mm.png"/></div>
+    </div>  
+  </footer>  
+  
+  </div>
+  
   <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/datatables.min.js"></script>
