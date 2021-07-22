@@ -333,7 +333,7 @@ header {
     opacity: 65%;
 }
 
-.lang-toggle a {
+.lang-toggle a:link {
     text-color: black;
 }
 
