@@ -357,6 +357,14 @@ summary {
     color: blue;
 }
 
+.text-success {
+    color: #26A69A !important;
+}
+
+.task-danger {
+    color: #DF2929 !important;
+}
+
 @media screen and (min-width: 768px) {
     body {
         margin: calc(var(--header-height) + 1rem) 0 0 0;

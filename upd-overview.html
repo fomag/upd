@@ -84,9 +84,9 @@
           <div class="col-lg-4 col-md-6">
             <div class="card">
               <div class="card-body">
-                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Unique visitors</span></h3>
+                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Visits to all CRA pages</span></h3>
                   <div class="row">
-                    <div class="col-md-8 col-sm-6"><span class="h3 text-nowrap">30,201,340</span></div>
+                    <div class="col-md-8 col-sm-6"><span class="h3 text-nowrap">190,201,340</span></div>
                     <div class="col-md-4 col-sd-6 text-end"><span class="h3 text-success text-nowrap"><i class='bx bx-up-arrow-alt'></i> 5%</span></div>
                 </div>
               </div>
@@ -95,9 +95,9 @@
           <div class="col-lg-4 col-md-6">
             <div class="card">
               <div class="card-body">
-                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Unique visitors</span></h3>
+                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Page views</span></h3>
                   <div class="row">
-                    <div class="col-sm-8"><span class="h3 text-nowrap">30,201,340</span></div>
+                    <div class="col-sm-8"><span class="h3 text-nowrap">201,340</span></div>
                     <div class="col-sm-4 text-end"><span class="h3 text-danger text-nowrap"><i class='bx bx-down-arrow-alt'></i> 5%</span></div>
                 </div>
               </div>
@@ -186,7 +186,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="card">
               <div class="card-body">
-                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Click through rate from Googe</span></h3>
+                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Click through rate from Google</span></h3>
                   <div class="row">
                     <div class="col-md-8 col-sm-6"><span class="h3 text-nowrap">55%</span></div>
                     <div class="col-md-4 col-sd-6 text-end"><span class="h3 text-success text-nowrap"><i class='bx bx-up-arrow-alt'></i> 5%</span></div>
@@ -258,25 +258,23 @@
                 var myChart = new Chart(ctx, {
                     type: 'bar',
                     data: {
-                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple'],
                         datasets: [{
                             label: '# of Votes',
-                            data: [12, 19, 3, 5, 2, 3],
+                            data: [12, 19, 3, 5, 2],
                             backgroundColor: [
-                                'rgba(255, 99, 132, 0.2)',
-                                'rgba(54, 162, 235, 0.2)',
-                                'rgba(255, 206, 86, 0.2)',
-                                'rgba(75, 192, 192, 0.2)',
-                                'rgba(153, 102, 255, 0.2)',
-                                'rgba(255, 159, 64, 0.2)'
+                                '#2e5ea7',
+                                '#64b5f6',
+                                '#26a69a',
+                                '#f57f17',
+                                '#fbc02d'
                             ],
                             borderColor: [
                                 'rgba(255, 99, 132, 1)',
                                 'rgba(54, 162, 235, 1)',
                                 'rgba(255, 206, 86, 1)',
                                 'rgba(75, 192, 192, 1)',
-                                'rgba(153, 102, 255, 1)',
-                                'rgba(255, 159, 64, 1)'
+                                'rgba(153, 102, 255, 1)'
                             ],
                             borderWidth: 1
                         }]
