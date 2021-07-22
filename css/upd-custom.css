@@ -322,7 +322,7 @@ header {
 }
 
 .sticky {
-    background: #E5E5E5;
+    background: #F8F9FB;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
