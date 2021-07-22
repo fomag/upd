@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow" />
+    <!-- Bootstrap CSS -->
+    <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+	  <!-- Other CSS -->
+    <link rel="stylesheet" type="text/css" href="css/datatables.min.css">
+    <link rel="stylesheet" type="text/css" href="css/upd-custom.css">
+    <link href='https://unpkg.com/boxicons@2.0.8/css/boxicons.min.css' rel='stylesheet'>
+    <title>UPD Dashboard</title>
+  </head>
+  <body id="body-pd" class="body-pd">
+  <div class="container vh-100">
+    <header id="header">
+      <div class="row">
+        <div class="col-md-3 text-start"><img class="img-fluid fip-colour" src="img/CRA-FIP-9pt-e.png"/></div>
+        <div class="col-md-9 text-end lang-toggle"> <a href="#">Français</a> </div>
+      </div>  
+    </header>
+    
+    <div class="l-navbar show" id="nav-bar">
+        <nav class="nav">
+            <div> 
+              <a href="#" class="nav_logo"> <i class='bx bxs-bar-chart-alt-2 nav_logo-icon'></i> <span class="nav_logo-name">UPD</span> </a>
+                <div class="nav_list"> 
+                  <a class="nav_link active" aria-current="page"> <i class='bx bxs-home nav_icon'></i> <span class="nav_name">Overview</span> </a> 
+                  <a href="upd-pages.html" class="nav_link"> <i class='bx bxs-layer nav_icon'></i> <span class="nav_name">Pages</span> </a> 
+                  <a href="upd-tasks.html" class="nav_link"> <i class='bx bx-task nav_icon'></i> <span class="nav_name">Tasks</span> </a> 
+                  <a href="upd-projects.html" class="nav_link"> <i class='bx bxs-folder nav_icon'></i> <span class="nav_name">Projects</span> </a> 
+                   </div>
+            </div> 
+            <div class="mb-4">
+            <a href="#" class="nav_link"> <i class='bx bxs-chat nav_icon'></i> <span class="nav_name">Feedback</span> </a>
+            <a href="#" class="nav_link"> <i class='bx bxs-arrow-to-left bx-sm' id="header-toggle"></i> </a>
+            </div>
+        </nav>
+    </div>
+    <!--Main content start-->
+
+    <h1 class="visually-hidden">Usability Performance Dashboard</h1>
+    
+        <h2 class="h3 pt-2 pb-2">Overview of CRA website</h2>
+
+        <div class="tabs sticky">
+          <ul>
+            <li class="is-active"><a>Summary</a></li>
+            <li><a href="#">Web traffic</a></li>
+            <li><a href="#">Search analytics</a></li>
+            <li><a href="#">Page feedback</a></li>
+            <li><a href="#">Call drivers</a></li>
+            <li><a href="#">UX tests</a></li>
+          </ul>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col">
+            <button type="button" class="btn btn-light align-middle pe-4"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path fill="none" d="M4.998 8H19v12H4.998z"></path><path d="M2.999 6v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2h-6V2h-2v2h-2c-1.103 0-2 .897-2 2zm16.002 14H4.999V8h14l.002 12z"></path></svg> Last week </button> <span class="text-secondary ps-2 text-nowrap">Jun 1-7 compared to May 25 -31</span>
+          </div>  
+        </div>  
+
+        <div class="row mb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Unique visitors</span></h3>
+                  <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8"><span class="h3 text-nowrap">30,201,340</span></div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 text-end"><span class="h3 text-danger text-nowrap"><i class='bx bx-down-arrow-alt'></i> 5%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Unique visitors</span></h3>
+                  <div class="row">
+                    <div class="col-md-8 col-sm-6"><span class="h3 text-nowrap">30,201,340</span></div>
+                    <div class="col-md-4 col-sd-6 text-end"><span class="h3 text-success text-nowrap"><i class='bx bx-up-arrow-alt'></i> 5%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Unique visitors</span></h3>
+                  <div class="row">
+                    <div class="col-sm-8"><span class="h3 text-nowrap">30,201,340</span></div>
+                    <div class="col-sm-4 text-end"><span class="h3 text-danger text-nowrap"><i class='bx bx-down-arrow-alt'></i> 5%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-lg-12 col-md-12">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Top 10 tasks</span></h3>
+                <table id="toptask" class="table table-striped" data>
+                  <thead>
+                  <tr>
+                    <th>Topic</th>
+                    <th>Sub-topic</th>
+                    <th>Change</th>
+                    <th>--</th>
+                  </tr>
+                  </thead>
+                  <tbody> 
+                  <tr>
+                    <td>COVID-19</td>
+                    <td>CRB</td>
+                    <td>&plus; 5.0%</td>
+                    <td>1,938,203</td>
+                  </tr>
+                  <tr>
+                    <td>COVID-19</td>
+                    <td>CRB</td>
+                    <td>&plus; 5.0%</td>
+                    <td>1,938,203</td>
+                  </tr>
+                  <tr>
+                    <td>COVID-19</td>
+                    <td>CRB</td>
+                    <td>&plus; 5.0%</td>
+                    <td>1,938,203</td>
+                  </tr>
+                  </tbody>  
+                </table>  
+              </div>
+            </div>
+          </div>
+        </div>  
+
+        <div class="row mb-4">
+          <div class="col-lg-12 col-md-12">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Top 10 tasks</span></h3>
+                <canvas id="myChart" width="400" height="100"></canvas>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.1/chart.min.js" integrity="sha512-5vwN8yor2fFT9pgPS9p9R7AszYaNn0LkQElTXIsZFCL7ucT8zDCAqlQXDdaqgA1mZP47hdvztBMsIoFxq/FyyQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>      
+                <script>
+                var ctx = document.getElementById('myChart');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                        datasets: [{
+                            label: '# of Votes',
+                            data: [12, 19, 3, 5, 2, 3],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+                </script>
+                <details class="details-chart">
+                  <summary>View table data</summary>
+                  <table class="table">
+                  <tr><th>Header 1</th><th>Header 2</th><th>Header 3</th><th>Header 4</th><th>Header 5</th></tr>
+                  <tr><td>Row:1 Cell:1</td><td>Row:1 Cell:2</td><td>Row:1 Cell:3</td><td>Row:1 Cell:4</td><td>Row:1 Cell:5</td></tr>
+                  <tr><td>Row:2 Cell:1</td><td>Row:2 Cell:2</td><td>Row:2 Cell:3</td><td>Row:2 Cell:4</td><td>Row:2 Cell:5</td></tr>
+                  <tr><td>Row:3 Cell:1</td><td>Row:3 Cell:2</td><td>Row:3 Cell:3</td><td>Row:3 Cell:4</td><td>Row:3 Cell:5</td></tr>
+                  <tr><td>Row:4 Cell:1</td><td>Row:4 Cell:2</td><td>Row:4 Cell:3</td><td>Row:4 Cell:4</td><td>Row:4 Cell:5</td></tr>
+                  <tr><td>Row:5 Cell:1</td><td>Row:5 Cell:2</td><td>Row:5 Cell:3</td><td>Row:5 Cell:4</td><td>Row:5 Cell:5</td></tr>
+                  <tr><td>Row:6 Cell:1</td><td>Row:6 Cell:2</td><td>Row:6 Cell:3</td><td>Row:6 Cell:4</td><td>Row:6 Cell:5</td></tr>
+                  </table>
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>  
+
+    <!--Main content end-->
+  </div>
+
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/datatables.min.js"></script>
+  <script type="text/javascript" src="js/sidebar.js"></script>
+
+  <script>
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    })
+  </script>
+
+  <script>
+    $(document).ready(function() {
+    $('#toptask').DataTable({
+        "paging":   false,
+        "ordering": true,
+        "searching": false,
+        "info": false
+      });
+    });
+  </script>  
+
+  
+
+  </body>
+</html>
