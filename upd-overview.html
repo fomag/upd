@@ -8,8 +8,10 @@
     <!-- Bootstrap CSS -->
     <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
 	  <!-- Other CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/datatables.min.css">
     <link rel="stylesheet" type="text/css" href="css/upd-custom.css">
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Lato|Noto+Sans">
     <link href='https://unpkg.com/boxicons@2.0.8/css/boxicons.min.css' rel='stylesheet'>
     <title>UPD Dashboard</title>
   </head>
@@ -25,17 +27,17 @@
     <div class="l-navbar show" id="nav-bar">
         <nav class="nav">
             <div> 
-              <a href="#" class="nav_logo"> <i class='bx bxs-bar-chart-alt-2 nav_logo-icon'></i> <span class="nav_logo-name">UPD</span> </a>
-                <div class="nav_list"> 
-                  <a class="nav_link active" aria-current="page"> <i class='bx bxs-home nav_icon'></i> <span class="nav_name">Overview</span> </a> 
-                  <a href="upd-pages.html" class="nav_link"> <i class='bx bxs-layer nav_icon'></i> <span class="nav_name">Pages</span> </a> 
-                  <a href="upd-tasks.html" class="nav_link"> <i class='bx bx-task nav_icon'></i> <span class="nav_name">Tasks</span> </a> 
-                  <a href="upd-projects.html" class="nav_link"> <i class='bx bxs-folder nav_icon'></i> <span class="nav_name">Projects</span> </a> 
+              <a class="nav_logo"> <span class="material-icons nav_logo-icon">leaderboard</span> <span class="nav_logo-name">UPD</span> </a>
+                <div class="nav_list mt-5"> 
+                  <a class="nav_link active" aria-current="page" id="active"> <span class="material-icons nav_icon">home</span> <span class="nav_name">Overview</span> </a> 
+                  <a href="upd-pages.html" class="nav_link"> <span class="material-icons nav_icon">layers</span> <span class="nav_name">Pages</span> </a> 
+                  <a href="upd-tasks.html" class="nav_link"> <span class="material-icons nav_icon">assignment</span> <span class="nav_name">Tasks</span> </a> 
+                  <a href="upd-projects.html" class="nav_link"> <span class="material-icons nav_icon">folder</span> <span class="nav_name">Projects</span> </a> 
                    </div>
             </div> 
             <div class="mb-4">
-            <a href="#" class="nav_link"> <i class='bx bxs-chat nav_icon'></i> <span class="nav_name">Feedback</span> </a>
-            <a href="#" class="nav_link"> <i class='bx bxs-arrow-to-left bx-sm' id="header-toggle"></i> </a>
+            <a href="#" class="nav_link"> <span class="material-icons nav_icon">feedback</span> <span class="nav_name">Feedback</span> </a>
+            <a class="nav_link"> <span class="material-icons nav_icon pointer" id="header-toggle">sync_alt</span> </a>
             </div>
         </nav>
     </div>
@@ -58,7 +60,7 @@
 
         <div class="row mb-4">
           <div class="col">
-            <button type="button" class="btn btn-light dropdown-toggle" id="range-button" data-bs-toggle="dropdown" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path fill="none" d="M4.998 8H19v12H4.998z"></path><path d="M2.999 6v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2h-6V2h-2v2h-2c-1.103 0-2 .897-2 2zm16.002 14H4.999V8h14l.002 12z"></path></svg> Last week </button> <span class="text-secondary ps-2 text-nowrap">Jun 1-7 compared to May 25 -31</span>
+            <button type="button" class="btn bg-white border border-1 dropdown-toggle" id="range-button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-icons align-top">calendar_today</span> Last week </button> <span class="text-secondary ps-2 text-nowrap">Jun 1-7 compared to May 25 -31</span>
 
             <ul class="dropdown-menu" aria-labelledby="range-button">
               <li><a class="dropdown-item" href="#">Last week</a></li>
@@ -72,33 +74,33 @@
         <div class="row mb-4">
           <div class="col-lg-4 col-md-6">
             <div class="card">
-              <div class="card-body">
-                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Unique visitors</span></h3>
+              <div class="card-body pt-2">
+                <h3 class="card-title"><span class="card-tooltip h6" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Unique visitors</span></h3>
                   <div class="row">
                     <div class="col-lg-8 col-md-8 col-sm-8"><span class="h3 text-nowrap">30,201,340</span></div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 text-end"><span class="h3 text-danger text-nowrap"><i class='bx bx-down-arrow-alt'></i> 5%</span></div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 text-end"><span class="h3 text-danger text-nowrap"><span class="material-icons">arrow_downward</span> 5%</span></div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="card">
-              <div class="card-body">
-                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Visits to all CRA pages</span></h3>
+              <div class="card-body pt-2">
+                <h3 class="card-title"><span class="card-tooltip h6" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Visits to all CRA pages</span></h3>
                   <div class="row">
                     <div class="col-md-8 col-sm-6"><span class="h3 text-nowrap">190,201,340</span></div>
-                    <div class="col-md-4 col-sd-6 text-end"><span class="h3 text-success text-nowrap"><i class='bx bx-up-arrow-alt'></i> 5%</span></div>
+                    <div class="col-md-4 col-sd-6 text-end"><span class="h3 text-success text-nowrap"><span class="material-icons">arrow_upward</span> 5%</span></div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="card">
-              <div class="card-body">
-                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Page views</span></h3>
+              <div class="card-body pt-2">
+                <h3 class="card-title"><span class="card-tooltip h6" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Page views</span></h3>
                   <div class="row">
                     <div class="col-sm-8"><span class="h3 text-nowrap">201,340</span></div>
-                    <div class="col-sm-4 text-end"><span class="h3 text-danger text-nowrap"><i class='bx bx-down-arrow-alt'></i> 5%</span></div>
+                    <div class="col-sm-4 text-end"><span class="h3 text-danger text-nowrap"><span class="material-icons">arrow_downward</span> 5%</span></div>
                 </div>
               </div>
             </div>
@@ -108,8 +110,8 @@
         <div class="row mb-4">
           <div class="col-lg-12 col-md-12">
             <div class="card">
-              <div class="card-body">
-                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Traffic breakdown compared to call volume</span></h3>
+              <div class="card-body pt-2">
+                <h3 class="card-title"><span class="card-tooltip h6" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Traffic breakdown compared to call volume</span></h3>
 
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.1/chart.min.js" integrity="sha512-5vwN8yor2fFT9pgPS9p9R7AszYaNn0LkQElTXIsZFCL7ucT8zDCAqlQXDdaqgA1mZP47hdvztBMsIoFxq/FyyQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
 
@@ -123,24 +125,28 @@
                           label: "Europe",
                           type: "line",
                           borderColor: "#8e5ea2",
+                          barPercentage: 0.5,
                           data: [408,547,675,734],
                           fill: false
                         }, {
                           label: "Africa",
                           type: "line",
                           borderColor: "#3e95cd",
+                          barPercentage: 0.5,
                           data: [133,221,783,2478],
                           fill: false
                         }, {
                           label: "Europe",
                           type: "bar",
                           backgroundColor: "#2E5EA7",
+                          barPercentage: 0.5,
                           data: [408,547,675,734],
                         }, {
                           label: "Africa",
                           type: "bar",
                           backgroundColor: "#B5C2CC",
                           backgroundColorHover: "#3e95cd",
+                          barPercentage: 0.5,
                           data: [133,221,783,2478]
                         }
                       ]
@@ -174,33 +180,33 @@
         <div class="row mb-4">
           <div class="col-lg-4 col-md-6">
             <div class="card">
-              <div class="card-body">
-                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Total impressions from Google</span></h3>
+              <div class="card-body pt-2">
+                <h3 class="card-title"><span class="card-tooltip h6" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Total impressions from Google</span></h3>
                   <div class="row">
                     <div class="col-lg-8 col-md-8 col-sm-8"><span class="h3 text-nowrap">30,201,340</span></div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 text-end"><span class="h3 text-danger text-nowrap"><i class='bx bx-down-arrow-alt'></i> 5%</span></div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 text-end"><span class="h3 text-danger text-nowrap"><span class="material-icons">arrow_downward</span> 5%</span></div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="card">
-              <div class="card-body">
-                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Click through rate from Google</span></h3>
+              <div class="card-body pt-2">
+                <h3 class="card-title"><span class="card-tooltip h6" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Click through rate from Google</span></h3>
                   <div class="row">
                     <div class="col-md-8 col-sm-6"><span class="h3 text-nowrap">55%</span></div>
-                    <div class="col-md-4 col-sd-6 text-end"><span class="h3 text-success text-nowrap"><i class='bx bx-up-arrow-alt'></i> 5%</span></div>
+                    <div class="col-md-4 col-sd-6 text-end"><span class="h3 text-success text-nowrap"><span class="material-icons">arrow_upward</span> 5%</span></div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="card">
-              <div class="card-body">
-                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Average rank on Google</span></h3>
+              <div class="card-body pt-2">
+                <h3 class="card-title"><span class="card-tooltip h6" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Average rank on Google</span></h3>
                   <div class="row">
                     <div class="col-sm-8"><span class="h3 text-nowrap">1.0</span></div>
-                    <div class="col-sm-4 text-end"><span class="h3 text-danger text-nowrap"><i class='bx bx-down-arrow-alt'></i> 5%</span></div>
+                    <div class="col-sm-4 text-end"><span class="h3 text-danger text-nowrap"><span class="material-icons">arrow_downward</span> 5%</span></div>
                 </div>
               </div>
             </div>
@@ -210,8 +216,8 @@
         <div class="row mb-4">
           <div class="col-lg-12 col-md-12">
             <div class="card">
-              <div class="card-body">
-                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Traffic breakdown compared to call volume</span></h3>
+              <div class="card-body pt-2">
+                <h3 class="card-title"><span class="card-tooltip h6" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Traffic breakdown compared to call volume</span></h3>
                 <table id="toptask" class="table table-striped" data>
                   <thead>
                   <tr>
@@ -240,6 +246,24 @@
                     <td><span class="text-danger">&plus; 5.0%</span></td>
                     <td>1,938,203</td>
                   </tr>
+                  <tr>
+                    <td>COVID-19</td>
+                    <td>CRB</td>
+                    <td><span class="text-danger">&plus; 5.0%</span></td>
+                    <td>1,938,203</td>
+                  </tr>
+                  <tr>
+                    <td>cra login</td>
+                    <td>My account</td>
+                    <td>&minus; 5.0%</td>
+                    <td>938,203</td>
+                  </tr>
+                  <tr>
+                    <td>COVID-19</td>
+                    <td>CRB</td>
+                    <td><span class="text-danger">&plus; 5.0%</span></td>
+                    <td>1,938,203</td>
+                  </tr>
                   </tbody>  
                 </table>  
               </div>
@@ -250,8 +274,8 @@
         <div class="row mb-4">
           <div class="col-lg-12 col-md-12">
             <div class="card">
-              <div class="card-body">
-                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Total calls by inquiry line</span></h3>
+              <div class="card-body pt-2">
+                <h3 class="card-title"><span class="card-tooltip h6" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Total calls by inquiry line</span></h3>
                 <canvas id="myChart" width="400" height="100"></canvas>    
                 <script>
                 var ctx = document.getElementById('myChart');
@@ -261,6 +285,7 @@
                         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple'],
                         datasets: [{
                             label: '# of Votes',
+                            barPercentage: 0.5,
                             data: [12, 19, 3, 5, 2],
                             backgroundColor: [
                                 '#2e5ea7',
@@ -308,8 +333,8 @@
         <div class="row mb-4">
           <div class="col-lg-6 col-md-6">
             <div class="card">
-              <div class="card-body">
-                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Did you find what you were looking for?</span></h3>
+              <div class="card-body pt-2">
+                <h3 class="card-title"><span class="card-tooltip h6" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Did you find what you were looking for?</span></h3>
                 <canvas id="bar-chart" width="800" height="450"></canvas>
                 <script>
                 new Chart(document.getElementById("bar-chart"), {
@@ -320,6 +345,7 @@
                         {
                           label: "Population (millions)",
                           backgroundColor: ["#f57f17", "#2e5ea7"],
+                          barPercentage: 0.5,
                           data: [2478,5267]
                         }
                       ]
@@ -350,8 +376,8 @@
           </div>
           <div class="col-lg-6 col-md-6">
             <div class="card">
-              <div class="card-body">
-                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">What was wrong?</span></h3>
+              <div class="card-body pt-2">
+                <h3 class="card-title"><span class="card-tooltip h6" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">What was wrong?</span></h3>
                 <canvas id="bar-chart2" width="800" height="450"></canvas>
                 <script>
                 new Chart(document.getElementById("bar-chart2"), {
@@ -362,6 +388,7 @@
                         {
                           label: "Population (millions)",
                           backgroundColor: ["#fbc02d", "#26a69a"],
+                          barPercentage: 0.5,
                           data: [2478,5267]
                         }
                       ]
@@ -395,8 +422,8 @@
         <div class="row mb-4">
           <div class="col-lg-4 col-md-6">
             <div class="card">
-              <div class="card-body">
-                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Tests completed</span></h3>
+              <div class="card-body pt-2">
+                <h3 class="card-title"><span class="card-tooltip h6" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Tests completed</span></h3>
                   <div class="row">
                     <div class="col-lg-8 col-md-8 col-sm-8"><span class="h3 text-nowrap">24</span></div>
                     <div class="col-lg-4 col-md-4 col-sm-4 text-end"><span class="h3 text-danger text-nowrap"></div>
@@ -406,8 +433,8 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="card">
-              <div class="card-body">
-                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Tasks tested</span></h3>
+              <div class="card-body pt-2">
+                <h3 class="card-title"><span class="card-tooltip h6" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Tasks tested</span></h3>
                   <div class="row">
                     <div class="col-md-8 col-sm-6"><span class="h3 text-nowrap">50</span></div>
                     <div class="col-md-4 col-sd-6 text-end"><span class="h3 text-success text-nowrap"></div>
@@ -417,8 +444,8 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="card">
-              <div class="card-body">
-                <h3 class="card-title"><span class="card-tooltip h5" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Participants</span></h3>
+              <div class="card-body pt-2">
+                <h3 class="card-title"><span class="card-tooltip h6" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Description of what this means">Participants</span></h3>
                   <div class="row">
                     <div class="col-sm-8"><span class="h3 text-nowrap">120</span></div>
                     <div class="col-sm-4 text-end"><span class="h3 text-danger text-nowrap"></div>

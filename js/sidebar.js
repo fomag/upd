@@ -1,27 +1,26 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
-const showNavbar = (toggleId, navId, bodyId, headerId) =>{
+const showNavbar = (toggleId, navId, bodyId, activeId) =>{
 const toggle = document.getElementById(toggleId),
 nav = document.getElementById(navId),
 bodypd = document.getElementById(bodyId),
-headerpd = document.getElementById(headerId)
-
+active = document.getElementById(activeId)
 // Validate that all variables exist
-if(toggle && nav && bodypd && headerpd){
+if(toggle && nav && bodypd && active){
 toggle.addEventListener('click', ()=>{
 // show navbar
 nav.classList.toggle('show')
 // change icon
-toggle.classList.toggle('bxs-arrow-to-right')
+//toggle.classList.toggle('bxs-arrow-to-right')
 // add padding to body
 bodypd.classList.toggle('body-pd')
-// add padding to header
-headerpd.classList.toggle('body-pd')
+// toggle active highlight in sidebar
+active.classList.toggle('active-hide')
 })
 }
 }
 
-showNavbar('header-toggle','nav-bar','body-pd','header')
+showNavbar('header-toggle','nav-bar','body-pd','active')
 
 /*===== LINK ACTIVE =====
 const linkColor = document.querySelectorAll('.nav_link')
