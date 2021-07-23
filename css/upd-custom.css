@@ -16,6 +16,7 @@
 
 body {
     background-color: #f8f9f8;
+    color: #333;
     position: relative;
     margin: var(--header-height) 0 0 0;
     padding: 0 1rem;
