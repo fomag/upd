@@ -2,8 +2,8 @@
     --header-height: 3rem;
     --nav-width: 80px;
     --first-color: #1B1C1E;
-    --first-color-light: white;
-    --white-color: #E5E5E5;
+    --first-color-light: #EFEFEF;
+    --white-color: #333;
     --body-font: 'Noto Sans', sans-serif;
     --z-fixed: 100
 }
@@ -98,16 +98,17 @@ header {
 }
 
 .nav_logo {
-    margin-bottom: 2rem
+    margin-bottom: 2rem;
+    color: var(--first-color-light);
 }
 
 .nav_logo-icon {
     font-size: 1.25rem;
-    color: var(--white-color)
+    color: var(--first-color-light);
 }
 
 .nav_logo-name {
-    color: var(--white-color);
+    color: var(--first-color-light);
     font-weight: 700
 }
 
@@ -162,6 +163,7 @@ header {
 .card-tooltip {
     cursor: help;
     border-bottom-style: dotted;
+    border-color: #858585;
     border-width: 2px;
 }
 
@@ -198,7 +200,7 @@ header {
 }
 
 summary {
-    color: blue;
+    color: #2E5EA7;
 }
 
 .text-success {
@@ -289,9 +291,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tabs li.is-active a {
-  border-bottom-color: #485fc7;
+  border-bottom-color: #2E5EA7;
   border-width: 2px;
-  color: #485fc7;
+  color: #2E5EA7;
 }
 
 .tabs ul {
