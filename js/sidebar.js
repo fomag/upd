@@ -8,8 +8,8 @@ active = document.getElementById(activeId)
 // Validate that all variables exist
 if(toggle && nav && bodypd && active){
 toggle.addEventListener('click', ()=>{
-// show navbar
-nav.classList.toggle('show')
+// hide navbar
+nav.classList.toggle('show-n')
 // change icon
 //toggle.classList.toggle('bxs-arrow-to-right')
 // add padding to body
